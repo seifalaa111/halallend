@@ -1,0 +1,7 @@
+{
+  "name": "halallend-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd api && npm install && npx tsc && node dist/main.js"
+  }
+}
