@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HalalLend Admin</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 50px; }
+    h1 { color: #2c7be5; }
+  </style>
+</head>
+<body>
+  <h1>🎉 HalalLend Admin</h1>
+  <p>API is at: <a href="https://halallend.up.railway.app">https://halallend.up.railway.app</a></p>
+  <p><strong>Status:</strong> <span id="status">Loading...</span></p>
+  <script>
+    fetch('https://halallend.up.railway.app/health')
+      .then(r => r.json())
+      .then(data => document.getElementById('status').textContent = data.status)
+      .catch(() => document.getElementById('status').textContent = '❌ Failed');
+  </script>
+</body>
+</html>
